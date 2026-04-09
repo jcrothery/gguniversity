@@ -13,12 +13,16 @@ Feel free to contact me with comments, suggestions or requests: <br />
 LinkedIn: [@dougal-toms](https://www.linkedin.com/in/dougal-toms/)<br />
 Twitter: [@DougalToms](https://www.twitter.com/DougalToms)
 
+## What's new?
+
+This fork has updated the University of Exeter theme and moved away from deprecated `ggplot2` args.
+
 ## Installation
 
 `gguniversity` can be installed through GitHub 
 ```{r, eval=F,message=F}
 install.packages("devtools")
-devtools::install_github("dougaltoms/gguniversity")
+devtools::install_github("jcrothery/gguniversity")
 ```
 
 A corresponding colour palette with `n` number of colours can be generated for your `ggplot2` visualisations, using the `<university>_palette()` function:

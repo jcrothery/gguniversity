@@ -15,7 +15,7 @@ theme_exeter <- function() {
 
   PrimaryColor <- "#003c3c"
   SecondaryColor <- "#00dca5"
-  HighlightColor <- "#ed3f37"
+  HighlightColor <- "#702082"
 
   if(!require(showtext)){
     stop("Package 'showtext' not installed")
@@ -49,9 +49,9 @@ theme_exeter <- function() {
     theme <- theme_classic()+
                 theme(text = element_text(family = "Exeter", size = 14),
                   plot.title = element_text(family = "Exeter", size = 28,
-                                            color = PrimaryColor,hjust = 0),
+                                            color = "black", hjust = 0),
                   plot.subtitle = element_text(family = "Exeter", size = 18,
-                                               color = SecondaryColor,hjust = 0),
+                                               color = "black", hjust = 0),
                   plot.background = element_blank()
                   )
 
@@ -59,14 +59,14 @@ theme_exeter <- function() {
     theme <- theme +
                 theme(
                   axis.title = element_text(family = "Exeter", size = 14,
-                                            color = PrimaryColor),
+                                            color = "black"),
                   axis.text = element_text(family = "Exeter", size = 14,
-                                            color = PrimaryColor),
-                  axis.line.x.bottom =element_line(color = PrimaryColor,
-                                                  size = 1),
-                  axis.line.y.left = element_line(color = PrimaryColor,
-                                                  size = 1),
-                  axis.ticks = element_line(color = PrimaryColor)
+                                            color = "black"),
+                  axis.line.x.bottom =element_line(color = "black",
+                                                  linewidth = 1),
+                  axis.line.y.left = element_line(color = "black",
+                                                  linewidth = 1),
+                  axis.ticks = element_line(color = "black")
                   )
 
     # Customise panel
@@ -95,12 +95,78 @@ exeter_palette <- function(n){
     n <- 5
   }
 
-  colours <- c("#022020","#003c3c","#007d69","#00c896","#00dca5")
+  colours <- c("#003c3c", "#007d69", "#00a87e","#00c896", "#00dca5")
   pal <- grDevices::colorRampPalette(colours)(n)
 
   return(pal)
 
 }
+
+#' exeter_palette2
+#'
+#' @param n number of colours to generate in palette
+#'
+#' @return vector of colour
+#' @export
+#'
+#'
+exeter_palette2 <- function(n){
+
+  if (missing(n)){
+    n <- 8
+  }
+
+  colours <- c("#93272c", "#b46a55", "#e60000", "#f9423a", "#702082", "#9569be", "#fc4c02", "#ff7f41")
+  pal <- grDevices::colorRampPalette(colours)(n)
+
+  return(pal)
+
+}
+
+#' exeter_palette3
+#'
+#' @param n number of colours to generate in palette
+#'
+#' @return vector of colour
+#' @export
+#'
+#'
+exeter_palette3 <- function(n){
+
+  if (missing(n)){
+    n <- 8
+  }
+
+  colours <- c("#ffc72c", "#f3d54e", "#250e62", "#69b3e7", "#e68699", "#f4c3cc", "#000000", "#888b8d")
+  pal <- grDevices::colorRampPalette(colours)(n)
+
+  return(pal)
+
+}
+
+#' exeter_palette_full
+#'
+#' @param n number of colours to generate in palette
+#'
+#' @return vector of colour
+#' @export
+#'
+#'
+exeter_palette_full <- function(n){
+
+  if (missing(n)){
+    n <-21
+  }
+
+  colours <- c("#003c3c", "#007d69", "#00a87e","#00c896", "#00dca5",
+  "#93272c", "#b46a55", "#e60000", "#f9423a", "#702082", "#9569be", "#fc4c02", "#ff7f41",
+  "#ffc72c", "#f3d54e", "#250e62", "#69b3e7", "#e68699", "#f4c3cc", "#000000", "#888b8d")
+  pal <- grDevices::colorRampPalette(colours)(n)
+
+  return(pal)
+
+}
+
 
 exeter_logo <- function(plot){
 
