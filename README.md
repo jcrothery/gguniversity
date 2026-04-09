@@ -10,13 +10,17 @@ Feel free to contact me with comments, suggestions or requests: <br />
 LinkedIn: [@dougal-toms](https://www.linkedin.com/in/dougal-toms/)<br />
 Twitter: [@DougalToms](https://www.twitter.com/DougalToms)
 
+## What's new?
+
+This fork has updated the University of Exeter theme, added some secondary palettes, and moved away from deprecated `ggplot2` args.
+
 ## Installation
 
 `gguniversity` can be installed through GitHub
 
 ``` r
 install.packages("devtools")
-devtools::install_github("dougaltoms/gguniversity")
+devtools::install_github("jcrothery/gguniversity")
 ```
 
 A corresponding colour palette with `n` number of colours can be
@@ -32,7 +36,7 @@ exe_pal <- gguniversity::exeter_palette(16)
 scales::show_col(exe_pal, ncol = 4, border=NA)
 ```
 
-![](https://github.com/dougaltoms/gguniversity/blob/main/README_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
+![](https://github.com/jcrothery/gguniversity/blob/main/README_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
 
 ## Examples
 
