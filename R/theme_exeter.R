@@ -48,7 +48,7 @@ theme_exeter <- function() {
     # Customise plot
     theme <- theme_classic()+
                 theme(text = element_text(family = "Exeter", size = 14),
-                  plot.title = element_text(family = "Exeter", size = 28,
+                  plot.title = element_text(family = "Exeter", size = 24,
                                             color = "black", hjust = 0),
                   plot.subtitle = element_text(family = "Exeter", size = 18,
                                                color = "black", hjust = 0),
@@ -58,14 +58,14 @@ theme_exeter <- function() {
     # Customise axes
     theme <- theme +
                 theme(
-                  axis.title = element_text(family = "Exeter", size = 14,
+                  axis.title = element_text(family = "Exeter", size = 16,
                                             color = "black"),
-                  axis.text = element_text(family = "Exeter", size = 14,
+                  axis.text = element_text(family = "Exeter", size = 16,
                                             color = "black"),
                   axis.line.x.bottom =element_line(color = "black",
-                                                  linewidth = 1),
+                                                  linewidth = 0.75),
                   axis.line.y.left = element_line(color = "black",
-                                                  linewidth = 1),
+                                                  linewidth = 0.75),
                   axis.ticks = element_line(color = "black")
                   )
 
